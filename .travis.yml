@@ -1,0 +1,13 @@
+# http://travis-ci.org/#!/debajyoti7/BookWorm
+language: python
+python:
+  - "2.7"
+  - "3.2"
+  - "3.3"
+# command to install dependencies
+#TO DO : UPDATE
+install:
+  - "python setup.py install"
+# command to run tests
+#TO DO : UPDATE
+script: python setup.py test
