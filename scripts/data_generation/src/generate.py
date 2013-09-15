@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #-*- coding:utf8 -*-
-#This code was originally intended by Debayan to generate the training files for tesseract-ocr for bootstrapping a new character set
+#This code was originally intended by Debayan (debayanin@gmail.com) to generate the training files for tesseract-ocr for bootstrapping a new character set
 #but this somewhat modified version is being used only to generate the individual characters, i.e., only sayamindu's code is critical here
 #However, Debayan's work has been a true source of guidance, and I hereby acknowledge it. Also included is his original README file.
 
@@ -43,8 +43,9 @@ def draw(font_string,font_size,lang,alphabets,outdir="."): # language, font file
     boxfile=image_dir+"/"+"bigimage.box"
     f=open(boxfile,"w")
     wt = 4000
-    ht = 4000 
-    bigimage=Image.new("L",(wt,ht),255)
+    ht = 4000 #modified later using a separate script
+	
+    bigimage=Image.new("L",(wt,ht),255)	#change here for inverting
     bigdraw=ImageDraw.Draw(bigimage)
     x=y=10
     count=0
@@ -58,7 +59,7 @@ def draw(font_string,font_size,lang,alphabets,outdir="."): # language, font file
         #opposite bgc fgc combination. Contact debayanin@gmail.com.
       
        
-        #The lines below are pango/cairo code
+        #The lines below are pango/cairo code 
         surface = cairo.ImageSurface(cairo.FORMAT_A8, font_size*4, font_size*3)
         context = cairo.Context(surface)
 
@@ -72,13 +73,11 @@ def draw(font_string,font_size,lang,alphabets,outdir="."): # language, font file
         #  lines take care of centering the text.
         width, height = surface.get_width(), surface.get_height()
         w, h = layout.get_pixel_size()
-        position = (10,10)#(width/2.0 - w/2.0, height/2.0 - h/2.0)
+        position = (10,10) #most likely this part messes up when you try to change the size within this script. It is suggested to use the separate script.
         context.move_to(*position)
         pc.show_layout(layout)
         surface.write_to_png("pango.png")
-	#iter=layout.get_iter()
-	#print iter.get_char_extents()
-
+	
         #Here we open the generated image using PIL functions
         temp_image=Image.open("pango.png") #black background, white text
         draw = ImageDraw.Draw(temp_image)
@@ -133,7 +132,7 @@ def draw(font_string,font_size,lang,alphabets,outdir="."): # language, font file
      
        
        
-    bigimage.save(image_dir+"/"+"bigimage.tif","TIFF")
+    #bigimage.save(image_dir+"/"+"bigimage.tif","TIFF") #useful to generate merged file for all images when using default sizes.
     f.close()
     train.train(lang,outdir)
        
