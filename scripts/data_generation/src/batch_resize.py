@@ -13,10 +13,10 @@ import Image
 path = "D:\\Dropbox\\ankur\\BookWorm\\small\\"
 
 #jpegList = glob.glob(path+"*.jpg")
-#gifList = glob.glob(path+"*.gif")
+#gifList = glob.glob(path+"*.gif")	#to be used if these formats are required, if a GUI is made in the future, should appear as an option
 pngList = glob.glob(path+"*.png")
 
-print size(pngList)
+#print size(pngList)
 
 
 
@@ -27,10 +27,10 @@ for each in pngList:
     #print (nx,ny)   
     img = im.resize((int(nx*5), int(ny*5)), Image.BICUBIC)
     name = str(count)
-    img.save(each+"_resized_58.png",dpi=(2500,2500))
+    img.save(each+"_resized_58.png",dpi=(2500,2500))	#default value selected after testing with several images, should be set by user as per requirements
     count += 1
 
-print count
+#print count	#used for generating statistics while testing/debugging
     
 
 # <codecell>
