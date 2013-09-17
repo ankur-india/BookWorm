@@ -14,5 +14,5 @@ install:
   
 # command to run tests
 script: 
-	python scripts/data_generation/src/unittest.py
-	python scripts/whitewashing_algo/src/clipping_algo_src/unittest.py
+ - python scripts/data_generation/src/unittest.py
+ - python scripts/whitewashing_algo/src/clipping_algo_src/unittest.py
