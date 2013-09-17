@@ -9,4 +9,4 @@ before_install :
   - sudo apt-get install python
 install: true
 # command to run tests
-script: python /scripts/data_generation/src/unittest.py
+script: python scripts/data_generation/src/unittest.py
