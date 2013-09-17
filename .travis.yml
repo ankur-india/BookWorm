@@ -7,8 +7,6 @@ virtualenv:
   system_site_packages: true
   
 before_install :
-	SITE_PKG_DIR=$VIRTUAL_ENV/lib/python$TRAVIS_PYTHON_VERSION/site-packages
-	rm -f $VIRTUAL_ENV/lib/python$TRAVIS_PYTHON_VERSION/no-global-site-packages.txt
   - sudo apt-get install python
 install: 
   - sudo apt-get install libpng12-dev libtiff4-dev libwebp-dev
