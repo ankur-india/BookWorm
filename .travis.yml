@@ -5,9 +5,13 @@ python:
 # command to install dependencies
 virtualenv:
   system_site_packages: true
+  SITE_PKG_DIR=$VIRTUAL_ENV/lib/python$TRAVIS_PYTHON_VERSION/site-packages
+  rm -f $VIRTUAL_ENV/lib/python$TRAVIS_PYTHON_VERSION/no-global-site-packages.txt
 before_install :
   - sudo apt-get install python
 install: 
   - sudo apt-get install libpng12-dev libtiff4-dev libwebp-dev
+  - sudo apt-get install python-numpy
+  - sudo apt-get install python-scipy
 # command to run tests
 script: python scripts/data_generation/src/unittest.py
