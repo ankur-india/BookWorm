@@ -5,7 +5,7 @@ python:
 # command to install dependencies
 virtualenv:
   system_site_packages: true
- before_install :
+before_install :
   - sudo apt-get install python
 install: true
 # command to run tests
