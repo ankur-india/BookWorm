@@ -8,6 +8,6 @@ virtualenv:
 before_install :
   - sudo apt-get install python
 install: 
-  - sudo apt-get install PIL
+  - sudo apt-get install libpng12-dev libtiff4-dev libwebp-dev
 # command to run tests
 script: python scripts/data_generation/src/unittest.py
