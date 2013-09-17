@@ -17,6 +17,10 @@ Mentor: Sankarshan Mukhopadhyay
 Melange URL: http://www.google-melange.com/gsoc/project/google/gsoc2013/debajyoti/35009
 
 
+Repository Structure:
+This repository can broadly be divided into two parts: the Notbooks, and the *.py scripts. Both the parts contain the same matter, however, the
+use of Notebooks is suggested as it is easier to understand and follow.
+
 
 INSTALLATION and RUNNING :
 
