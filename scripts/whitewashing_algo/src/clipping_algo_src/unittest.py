@@ -1,6 +1,6 @@
 import os
 import unittest
-from batch_resize import batch_resize
+from read_image_info import read_info
 
 class TestLocation(unittest.TestCase):
     
@@ -8,7 +8,7 @@ class TestLocation(unittest.TestCase):
         pass
     
     def test_location(self):
-        self.assertEqual(1,os.path.exists("Desktop"))
+        self.assertEqual(1,os.path.exists("D:\\Dropbox\\ankur\\pixel_tests\\test.png"))
         
 if __name__ == '__main__':
     unittest.main()
