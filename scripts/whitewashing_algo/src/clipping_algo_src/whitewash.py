@@ -48,21 +48,21 @@ if __name__ == '__main__':
     
     #user input for location
     #if(len(sys.argv)!=5):
-    #    print "Usage: python read_image_info.py -location <location> -imFile <file name>"
+    #    print "Usage: python read_image_info.py -location <location> -matraFile <file name>"
     #    print "Error : insufficient arguments"
     #    exit()
     #
     #if(sys.argv[1]=="-location"):
     #    location=sys.argv[2]
     #else:
-    #    print "Usage: python read_image_info.py -location <location> -imFile <file name>"
+    #    print "Usage: python read_image_info.py -location <location> -matraFile <file name>"
     #    print "Error : wrong location"
     #    exit()
     #
-    #if(sys.argv[3]=="-imFile"):
+    #if(sys.argv[3]=="-matraFile"):
     #    imFile=sys.argv[4]
     #else:
-    #    print "Usage: python read_image_info.py -location <location> -imFile <file name>"
+    #    print "Usage: python read_image_info.py -location <location> -matraFile <file name>"
     #    print "Error : wrong filename"
     #    exit()
     

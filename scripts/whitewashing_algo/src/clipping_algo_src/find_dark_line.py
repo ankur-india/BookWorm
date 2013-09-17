@@ -83,7 +83,7 @@ if __name__ == '__main__':
     #if(sys.argv[3]=="-dataFile"):
     #    imFile=sys.argv[4]
     #else:
-    #    print "Usage: python read_image_info.py -location <location> -imFile <file name>"
+    #    print "Usage: python read_image_info.py -location <location> -dataFile <file name>"
     #    print "Error : wrong filename"
     #    exit()
     
