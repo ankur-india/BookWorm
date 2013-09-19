@@ -5,9 +5,14 @@ python:
 # command to install dependencies
 virtualenv:
   system_site_packages: true
-#TO DO : UPDATE
-install:
-  - "python setup.py install"
+before_install :
+  - sudo apt-get install python
+install: 
+  - sudo apt-get install libpng12-dev libtiff4-dev libwebp-dev
+  - sudo apt-get install python-numpy
+  - sudo apt-get install python-scipy
+  
 # command to run tests
-#TO DO : UPDATE
-script: python setup.py test
+script: 
+ - python scripts/data_generation/src/unittest.py
+ - python scripts/whitewashing_algo/src/clipping_algo_src/unittest.py

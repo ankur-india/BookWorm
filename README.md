@@ -15,3 +15,5 @@ Student Name: Debajyoti Nag
 Mentor: Sankarshan Mukhopadhyay
 
 Melange URL: http://www.google-melange.com/gsoc/project/google/gsoc2013/debajyoti/35009
+
+Overall project roadmap has been maintained in form of a blog at : http://bookwormankur.blogspot.se/
